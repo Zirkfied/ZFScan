@@ -1,7 +1,7 @@
 # ZFScan
 A simple scan QRCode / BarCode library for iOS - 仿微信 二维码/条形码 扫描
 
-此框架适用于 >= iOS 8，用法简单，喜欢的欢迎star一个，有任何建议或问题可以加QQ群交流：451169423
+此框架适用于 >= iOS 8，已支持横竖屏适配，用法简单，喜欢的欢迎star一个，有任何建议或问题可以加QQ群交流：451169423
 
 ### 用法:
         第一步(step 1)
