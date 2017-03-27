@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18B530C71E10CAB3008F0B62 /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
 		18CEF7401C8EAA9000462665 /* ZFScanCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFScanCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEF7441C8EAA9000462665 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18CEF7461C8EAA9000462665 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 				18CEF7801C8EAAA200462665 /* ZFMaskView.m */,
 				18CEF77D1C8EAAA200462665 /* ZFConst.h */,
 				18CEF77E1C8EAAA200462665 /* ZFConst.m */,
+				18B530C71E10CAB3008F0B62 /* ZFColor.h */,
 				18CEF7771C8EAAA200462665 /* resource */,
 			);
 			path = ZFScan;
@@ -253,6 +255,7 @@
 				TargetAttributes = {
 					18CEF73F1C8EAA9000462665 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = N7QRRWM4QN;
 					};
 					18CEF7581C8EAA9000462665 = {
 						CreatedOnToolsVersion = 7.2;
@@ -467,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N7QRRWM4QN;
 				INFOPLIST_FILE = ZFScanCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zirkfied.ZFScanCode;
@@ -478,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N7QRRWM4QN;
 				INFOPLIST_FILE = ZFScanCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zirkfied.ZFScanCode;

@@ -8,6 +8,10 @@
 
 #import "ZFConst.h"
 
+CGFloat const NAVIGATIONBAR_HEIGHT = 64.f;
+CGFloat const TABBAR_HEIGHT = 49.f;
+CGFloat const ZFScanRatio = 0.68f;
+
 @implementation ZFConst
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ZFConst.h"
 #import "ZFScanViewController.h"
 
 @interface ViewController ()
@@ -49,5 +48,25 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark - 横竖屏适配
+
+/**
+ *  PS：size为控制器self.view的size，若图表不是直接添加self.view上，则修改以下的frame值
+ */
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator{
+    
+    self.scanButton.frame = CGRectMake((SCREEN_HEIGHT - 100) / 2, SCREEN_WIDTH - 100, 100, 30);
+    
+    //横屏(转前是横屏，转后是竖屏)
+    if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationLandscapeLeft || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationLandscapeRight) {
+        
+        self.resultLabel.frame = CGRectMake(0, 200, SCREEN_HEIGHT, 100);
+        
+    //竖屏(转前是竖屏，转后是横屏)
+    }else{
+        self.resultLabel.frame = CGRectMake(0, 80, SCREEN_HEIGHT, 100);
+        
+    }
+}
 
 @end
