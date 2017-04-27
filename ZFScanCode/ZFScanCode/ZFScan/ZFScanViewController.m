@@ -115,6 +115,34 @@
     
     //开始捕获
     [self.session startRunning];
+    
+    //先进行判断是否支持控制对焦
+    if (device.isFocusPointOfInterestSupported) {
+        NSError *error = nil;
+        //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
+        [device lockForConfiguration:&error];
+        [device setFocusMode:AVCaptureFocusModeAutoFocus];
+        //操作完成后，记得进行unlock。
+        [device unlockForConfiguration];
+    }
+    
+    if (device.isExposurePointOfInterestSupported) {
+        NSError *error = nil;
+        //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
+        [device lockForConfiguration:&error];
+        [device setExposureMode:AVCaptureExposureModeAutoExpose];
+        //操作完成后，记得进行unlock。
+        [device unlockForConfiguration];
+    }
+    
+    if (device.isAutoFocusRangeRestrictionSupported) {
+        NSError *error = nil;
+        //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
+        [device lockForConfiguration:&error];
+        [device setAutoFocusRangeRestriction:AVCaptureAutoFocusRangeRestrictionNear];
+        //操作完成后，记得进行unlock。
+        [device unlockForConfiguration];
+    }    
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
