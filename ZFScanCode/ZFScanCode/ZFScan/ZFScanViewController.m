@@ -9,9 +9,12 @@
 #import "ZFScanViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "ZFMaskView.h"
+#import <ImageIO/ImageIO.h>
 
-@interface ZFScanViewController ()<AVCaptureMetadataOutputObjectsDelegate>
+@interface ZFScanViewController ()<AVCaptureMetadataOutputObjectsDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
+/** 设备 */
+@property (nonatomic, strong) AVCaptureDevice * device;
 /** 输入输出的中间桥梁 */
 @property (nonatomic, strong) AVCaptureSession * session;
 /** 相机图层 */
@@ -88,13 +91,22 @@
  */
 - (void)capture{
     //获取摄像设备
-    AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     //创建输入流
-    AVCaptureDeviceInput * input = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
+    AVCaptureDeviceInput * input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
     //创建输出流
-    AVCaptureMetadataOutput * output = [[AVCaptureMetadataOutput alloc] init];
+    AVCaptureMetadataOutput * metadataOutput = [[AVCaptureMetadataOutput alloc] init];
     //设置代理 在主线程里刷新
-    [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    [metadataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    
+    //创建视频输出流
+    AVCaptureVideoDataOutput * videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
+    //设置代理在子线程里刷新
+    dispatch_queue_t queue = dispatch_queue_create("myQueue", NULL);
+    [videoDataOutput setSampleBufferDelegate:self queue:queue];
+    //设置像素格式
+    videoDataOutput.videoSettings = [NSDictionary dictionaryWithObject:
+     [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
     
     //初始化链接对象
     self.session = [[AVCaptureSession alloc] init];
@@ -102,7 +114,8 @@
     self.session.sessionPreset = AVCaptureSessionPresetHigh;
     
     [self.session addInput:input];
-    [self.session addOutput:output];
+    [self.session addOutput:metadataOutput];
+    [self.session addOutput:videoDataOutput];
     
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     self.previewLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -111,37 +124,37 @@
     [self.view.layer addSublayer:self.previewLayer];
     
     //设置扫描支持的编码格式(如下设置条形码和二维码兼容)
-    output.metadataObjectTypes = self.metadataObjectTypes;
+    metadataOutput.metadataObjectTypes = self.metadataObjectTypes;
     
     //开始捕获
     [self.session startRunning];
     
     //先进行判断是否支持控制对焦
-    if (device.isFocusPointOfInterestSupported) {
-        NSError *error = nil;
-        //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
-        [device lockForConfiguration:&error];
-        [device setFocusMode:AVCaptureFocusModeAutoFocus];
-        //操作完成后，记得进行unlock。
-        [device unlockForConfiguration];
-    }
+//    if (self.device.isFocusPointOfInterestSupported) {
+//        NSError *error = nil;
+//        //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
+//        [self.device lockForConfiguration:&error];
+//        [self.device setFocusMode:AVCaptureFocusModeAutoFocus];
+//        //操作完成后，记得进行unlock。
+//        [self.device unlockForConfiguration];
+//    }
     
-    if (device.isExposurePointOfInterestSupported) {
+    if (self.device.isExposurePointOfInterestSupported) {
         NSError *error = nil;
         //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
-        [device lockForConfiguration:&error];
-        [device setExposureMode:AVCaptureExposureModeAutoExpose];
+        [self.device lockForConfiguration:&error];
+        [self.device setExposureMode:AVCaptureExposureModeAutoExpose];
         //操作完成后，记得进行unlock。
-        [device unlockForConfiguration];
+        [self.device unlockForConfiguration];
     }
-    
-    if (device.isAutoFocusRangeRestrictionSupported) {
+
+    if (self.device.isAutoFocusRangeRestrictionSupported) {
         NSError *error = nil;
         //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
-        [device lockForConfiguration:&error];
-        [device setAutoFocusRangeRestriction:AVCaptureAutoFocusRangeRestrictionNear];
+        [self.device lockForConfiguration:&error];
+        [self.device setAutoFocusRangeRestriction:AVCaptureAutoFocusRangeRestrictionNear];
         //操作完成后，记得进行unlock。
-        [device unlockForConfiguration];
+        [self.device unlockForConfiguration];
     }    
 }
 
@@ -157,6 +170,37 @@
             [self.navigationController popViewControllerAnimated:YES];
         }else{
             [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
+}
+
+#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
+
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection{
+    CFDictionaryRef metadataDict = CMCopyDictionaryOfAttachments(NULL,sampleBuffer, kCMAttachmentMode_ShouldPropagate);
+    NSDictionary *metadata = [[NSMutableDictionary alloc] initWithDictionary:(__bridge NSDictionary*)metadataDict];
+    CFRelease(metadataDict);
+    NSDictionary *exifMetadata = [[metadata objectForKey:(NSString *)kCGImagePropertyExifDictionary] mutableCopy];
+    float brightnessValue = [[exifMetadata objectForKey:(NSString *)kCGImagePropertyExifBrightnessValue] floatValue];
+    
+    if (brightnessValue < 3.3) {
+        if (self.device.isExposurePointOfInterestSupported) {
+            NSError *error = nil;
+            //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
+            [self.device lockForConfiguration:&error];
+            [self.device setExposureMode:AVCaptureExposureModeAutoExpose];
+            //操作完成后，记得进行unlock。
+            [self.device unlockForConfiguration];
+        }
+        
+    }else if (brightnessValue >= 3.3){
+        if (self.device.isExposurePointOfInterestSupported) {
+            NSError *error = nil;
+            //对cameraDevice进行操作前，需要先锁定，防止其他线程访问
+            [self.device lockForConfiguration:&error];
+            [self.device setExposureMode:AVCaptureExposureModeLocked];
+            //操作完成后，记得进行unlock。
+            [self.device unlockForConfiguration];
         }
     }
 }
@@ -195,15 +239,5 @@
         self.cancelButton.center = CGPointMake(SCREEN_HEIGHT - (self.view.center.y - SCREEN_WIDTH * ZFScanRatio * 0.5) * 0.5, self.view.center.x);
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
