@@ -45,7 +45,7 @@
         NSLog(@"扫描结果的字符串======%@",barCodeString);
     };
     
-    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark - 横竖屏适配

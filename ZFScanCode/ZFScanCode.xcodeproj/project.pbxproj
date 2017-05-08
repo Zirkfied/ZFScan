@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18BD10ED1EC0095B00788E4D /* Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10EC1EC0095B00788E4D /* Down@2x.png */; };
+		18BD10EE1EC0095B00788E4D /* Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10EC1EC0095B00788E4D /* Down@2x.png */; };
+		18BD10F31EC0202A00788E4D /* Flashlight_N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10F21EC0202A00788E4D /* Flashlight_N@2x.png */; };
+		18BD10F41EC0202A00788E4D /* Flashlight_N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10F21EC0202A00788E4D /* Flashlight_N@2x.png */; };
+		18BD10FC1EC020A000788E4D /* Flashlight_H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10FB1EC020A000788E4D /* Flashlight_H@2x.png */; };
+		18BD10FD1EC020A000788E4D /* Flashlight_H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10FB1EC020A000788E4D /* Flashlight_H@2x.png */; };
 		18CEF7451C8EAA9000462665 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7441C8EAA9000462665 /* main.m */; };
 		18CEF7481C8EAA9000462665 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7471C8EAA9000462665 /* AppDelegate.m */; };
 		18CEF74B1C8EAA9000462665 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF74A1C8EAA9000462665 /* ViewController.m */; };
@@ -44,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		18B530C71E10CAB3008F0B62 /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
+		18BD10EC1EC0095B00788E4D /* Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Down@2x.png"; sourceTree = "<group>"; };
+		18BD10F21EC0202A00788E4D /* Flashlight_N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flashlight_N@2x.png"; sourceTree = "<group>"; };
+		18BD10FB1EC020A000788E4D /* Flashlight_H@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flashlight_H@2x.png"; sourceTree = "<group>"; };
 		18CEF7401C8EAA9000462665 /* ZFScanCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFScanCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEF7441C8EAA9000462665 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18CEF7461C8EAA9000462665 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -184,6 +193,9 @@
 				18CEF77A1C8EAAA200462665 /* ScanQR2@2x.png */,
 				18CEF77B1C8EAAA200462665 /* ScanQR3@2x.png */,
 				18CEF77C1C8EAAA200462665 /* ScanQR4@2x.png */,
+				18BD10F21EC0202A00788E4D /* Flashlight_N@2x.png */,
+				18BD10FB1EC020A000788E4D /* Flashlight_H@2x.png */,
+				18BD10EC1EC0095B00788E4D /* Down@2x.png */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -293,12 +305,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CEF7841C8EAAA200462665 /* ScanQR1@2x.png in Resources */,
+				18BD10F31EC0202A00788E4D /* Flashlight_N@2x.png in Resources */,
+				18BD10FC1EC020A000788E4D /* Flashlight_H@2x.png in Resources */,
 				18CEF7861C8EAAA200462665 /* ScanQR3@2x.png in Resources */,
 				18CEF7851C8EAAA200462665 /* ScanQR2@2x.png in Resources */,
 				18CEF7531C8EAA9000462665 /* LaunchScreen.storyboard in Resources */,
 				18CEF7831C8EAAA200462665 /* QRCodeScanLine@2x.png in Resources */,
 				18CEF7501C8EAA9000462665 /* Assets.xcassets in Resources */,
 				18CEF74E1C8EAA9000462665 /* Main.storyboard in Resources */,
+				18BD10ED1EC0095B00788E4D /* Down@2x.png in Resources */,
 				18CEF7871C8EAAA200462665 /* ScanQR4@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +322,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BD10FD1EC020A000788E4D /* Flashlight_H@2x.png in Resources */,
+				18BD10EE1EC0095B00788E4D /* Down@2x.png in Resources */,
+				18BD10F41EC0202A00788E4D /* Flashlight_N@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

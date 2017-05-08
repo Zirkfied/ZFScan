@@ -50,14 +50,14 @@
     //遮罩层
     self.maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     self.maskView.backgroundColor = [UIColor blackColor];
-    self.maskView.alpha = 0.5;
+    self.maskView.alpha = 0.3;
     self.maskView.layer.mask = [self maskLayer];
     [self addSubview:self.maskView];
     
     //提示框
     self.hintLabel = [[UILabel alloc] init];
     self.hintLabel.text = @"将 二维码/条形码 放入框内中央，即可自动扫描";
-    self.hintLabel.textColor = [UIColor lightGrayColor];
+    self.hintLabel.textColor = ZFFicelle;
     self.hintLabel.numberOfLines = 0;
     self.hintLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.hintLabel];
@@ -118,7 +118,8 @@
     }else{
         //提示框
         self.hintLabel.frame = CGRectMake(0, 0, self.frame.size.width * ZFScanRatio, 60);
-        self.hintLabel.center = CGPointMake(self.maskView.center.x, self.maskView.center.y + (self.frame.size.width * ZFScanRatio) * 0.5 + 40);
+        self.hintLabel.center = CGPointMake(self.maskView.center.x, 120);
+        
         //左上
         self.topLeftImg.frame = CGRectMake((self.frame.size.width - (self.frame.size.width * ZFScanRatio)) * 0.5, (self.frame.size.height - (self.frame.size.width * ZFScanRatio)) * 0.5, topLeft.size.width, topLeft.size.height);
         //右上
@@ -244,7 +245,7 @@
     if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationLandscapeLeft || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationLandscapeRight){
         
         self.hintLabel.frame = CGRectMake(0, 0, self.frame.size.width * ZFScanRatio, 60);
-        self.hintLabel.center = CGPointMake(self.maskView.center.x, self.maskView.center.y + (self.frame.size.width * ZFScanRatio) * 0.5 + 40);
+        self.hintLabel.center = CGPointMake(self.maskView.center.x, 120);
         
         self.topLeftImg.frame = CGRectMake((self.frame.size.width - (self.frame.size.width * ZFScanRatio)) * 0.5, (self.frame.size.height - (self.frame.size.width * ZFScanRatio)) * 0.5, self.topLeftImg.image.size.width, self.topLeftImg.image.size.height);
         
@@ -280,6 +281,12 @@
  */
 - (void)removeAnimation{
     [self.scanLineImg.layer removeAllAnimations];
+}
+
+#pragma mark - 重写setter, getter方法
+
+- (CGFloat)scanBezierStartXPos{
+    return (self.frame.size.width - (self.frame.size.width * ZFScanRatio)) * 0.5;
 }
 
 @end

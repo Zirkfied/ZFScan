@@ -10,6 +10,10 @@
 
 @interface ZFMaskView : UIView
 
+#pragma mark - readonly(只读)
+
+@property (nonatomic, assign, readonly) CGFloat scanBezierStartXPos;
+
 #pragma mark - public method
 
 /**
