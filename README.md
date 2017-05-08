@@ -17,7 +17,7 @@ A simple scan QRCode / BarCode library for iOS - 仿微信 二维码/条形码 �
             NSLog(@"扫描结果======%@",barCodeString);
         };
     
-        [self.navigationController pushViewController:vc animated:YES];
+        [self presentViewController:vc animated:YES completion:nil];
         
 
 ### 界面效果
