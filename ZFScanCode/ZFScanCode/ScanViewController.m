@@ -1,25 +1,26 @@
 //
-//  ViewController.m
+//  ScanViewController.m
 //  ZFScanCode
 //
 //  Created by apple on 16/3/8.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ScanViewController.h"
 #import "ZFScanViewController.h"
 
-@interface ViewController ()
+@interface ScanViewController ()
 
 @property (nonatomic, strong) UIButton * scanButton;//扫描按钮
 @property (nonatomic, strong) UILabel * resultLabel;//显示扫描结果
 
 @end
 
-@implementation ViewController
+@implementation ScanViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = ZFWhite;
     
     //扫描按钮
     self.scanButton = [UIButton buttonWithType:UIButtonTypeSystem];

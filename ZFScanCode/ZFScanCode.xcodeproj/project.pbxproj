@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1892085F1EC04A5E00245FAD /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892085E1EC04A5E00245FAD /* ZFConst.m */; };
+		189208601EC04A5E00245FAD /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892085E1EC04A5E00245FAD /* ZFConst.m */; };
+		189208641EC04AA900245FAD /* ZFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208631EC04AA900245FAD /* ZFMaskView.m */; };
+		189208651EC04AA900245FAD /* ZFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208631EC04AA900245FAD /* ZFMaskView.m */; };
+		1892086A1EC04B2600245FAD /* UIImage+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208691EC04B2600245FAD /* UIImage+Zirkfied.m */; };
+		1892086B1EC04B2600245FAD /* UIImage+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208691EC04B2600245FAD /* UIImage+Zirkfied.m */; };
+		1892086E1EC04B9B00245FAD /* UIColor+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892086D1EC04B9B00245FAD /* UIColor+Zirkfied.m */; };
+		1892086F1EC04B9B00245FAD /* UIColor+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892086D1EC04B9B00245FAD /* UIColor+Zirkfied.m */; };
+		189208721EC04C3200245FAD /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208711EC04C3200245FAD /* CodeViewController.m */; };
+		189208731EC04C3200245FAD /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208711EC04C3200245FAD /* CodeViewController.m */; };
+		189208761EC04CC600245FAD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208751EC04CC600245FAD /* TableViewController.m */; };
+		189208771EC04CC600245FAD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208751EC04CC600245FAD /* TableViewController.m */; };
 		18BD10ED1EC0095B00788E4D /* Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10EC1EC0095B00788E4D /* Down@2x.png */; };
 		18BD10EE1EC0095B00788E4D /* Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10EC1EC0095B00788E4D /* Down@2x.png */; };
 		18BD10F31EC0202A00788E4D /* Flashlight_N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10F21EC0202A00788E4D /* Flashlight_N@2x.png */; };
@@ -15,7 +27,7 @@
 		18BD10FD1EC020A000788E4D /* Flashlight_H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BD10FB1EC020A000788E4D /* Flashlight_H@2x.png */; };
 		18CEF7451C8EAA9000462665 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7441C8EAA9000462665 /* main.m */; };
 		18CEF7481C8EAA9000462665 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7471C8EAA9000462665 /* AppDelegate.m */; };
-		18CEF74B1C8EAA9000462665 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF74A1C8EAA9000462665 /* ViewController.m */; };
+		18CEF74B1C8EAA9000462665 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF74A1C8EAA9000462665 /* ScanViewController.m */; };
 		18CEF74E1C8EAA9000462665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF74C1C8EAA9000462665 /* Main.storyboard */; };
 		18CEF7501C8EAA9000462665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF74F1C8EAA9000462665 /* Assets.xcassets */; };
 		18CEF7531C8EAA9000462665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF7511C8EAA9000462665 /* LaunchScreen.storyboard */; };
@@ -26,8 +38,6 @@
 		18CEF7851C8EAAA200462665 /* ScanQR2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF77A1C8EAAA200462665 /* ScanQR2@2x.png */; };
 		18CEF7861C8EAAA200462665 /* ScanQR3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF77B1C8EAAA200462665 /* ScanQR3@2x.png */; };
 		18CEF7871C8EAAA200462665 /* ScanQR4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF77C1C8EAAA200462665 /* ScanQR4@2x.png */; };
-		18CEF7881C8EAAA200462665 /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF77E1C8EAAA200462665 /* ZFConst.m */; };
-		18CEF7891C8EAAA200462665 /* ZFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7801C8EAAA200462665 /* ZFMaskView.m */; };
 		18CEF78A1C8EAAA200462665 /* ZFScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7821C8EAAA200462665 /* ZFScanViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +59,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18B530C71E10CAB3008F0B62 /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
+		1892085C1EC04A5E00245FAD /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
+		1892085D1EC04A5E00245FAD /* ZFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFConst.h; sourceTree = "<group>"; };
+		1892085E1EC04A5E00245FAD /* ZFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFConst.m; sourceTree = "<group>"; };
+		189208621EC04AA900245FAD /* ZFMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMaskView.h; sourceTree = "<group>"; };
+		189208631EC04AA900245FAD /* ZFMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFMaskView.m; sourceTree = "<group>"; };
+		189208681EC04B2600245FAD /* UIImage+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Zirkfied.h"; sourceTree = "<group>"; };
+		189208691EC04B2600245FAD /* UIImage+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Zirkfied.m"; sourceTree = "<group>"; };
+		1892086C1EC04B9B00245FAD /* UIColor+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Zirkfied.h"; sourceTree = "<group>"; };
+		1892086D1EC04B9B00245FAD /* UIColor+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Zirkfied.m"; sourceTree = "<group>"; };
+		189208701EC04C3200245FAD /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
+		189208711EC04C3200245FAD /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
+		189208741EC04CC600245FAD /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		189208751EC04CC600245FAD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		18BD10EC1EC0095B00788E4D /* Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Down@2x.png"; sourceTree = "<group>"; };
 		18BD10F21EC0202A00788E4D /* Flashlight_N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flashlight_N@2x.png"; sourceTree = "<group>"; };
 		18BD10FB1EC020A000788E4D /* Flashlight_H@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flashlight_H@2x.png"; sourceTree = "<group>"; };
@@ -57,8 +79,8 @@
 		18CEF7441C8EAA9000462665 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18CEF7461C8EAA9000462665 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18CEF7471C8EAA9000462665 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18CEF7491C8EAA9000462665 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18CEF74A1C8EAA9000462665 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18CEF7491C8EAA9000462665 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		18CEF74A1C8EAA9000462665 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		18CEF74D1C8EAA9000462665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18CEF74F1C8EAA9000462665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18CEF7521C8EAA9000462665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,10 +96,6 @@
 		18CEF77A1C8EAAA200462665 /* ScanQR2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR2@2x.png"; sourceTree = "<group>"; };
 		18CEF77B1C8EAAA200462665 /* ScanQR3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR3@2x.png"; sourceTree = "<group>"; };
 		18CEF77C1C8EAAA200462665 /* ScanQR4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR4@2x.png"; sourceTree = "<group>"; };
-		18CEF77D1C8EAAA200462665 /* ZFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFConst.h; sourceTree = "<group>"; };
-		18CEF77E1C8EAAA200462665 /* ZFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFConst.m; sourceTree = "<group>"; };
-		18CEF77F1C8EAAA200462665 /* ZFMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMaskView.h; sourceTree = "<group>"; };
-		18CEF7801C8EAAA200462665 /* ZFMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFMaskView.m; sourceTree = "<group>"; };
 		18CEF7811C8EAAA200462665 /* ZFScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFScanViewController.h; sourceTree = "<group>"; };
 		18CEF7821C8EAAA200462665 /* ZFScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFScanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +125,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1892085B1EC04A5E00245FAD /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1892085C1EC04A5E00245FAD /* ZFColor.h */,
+				1892085D1EC04A5E00245FAD /* ZFConst.h */,
+				1892085E1EC04A5E00245FAD /* ZFConst.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		189208611EC04AA900245FAD /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				189208621EC04AA900245FAD /* ZFMaskView.h */,
+				189208631EC04AA900245FAD /* ZFMaskView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		189208671EC04B2600245FAD /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1892086C1EC04B9B00245FAD /* UIColor+Zirkfied.h */,
+				1892086D1EC04B9B00245FAD /* UIColor+Zirkfied.m */,
+				189208681EC04B2600245FAD /* UIImage+Zirkfied.h */,
+				189208691EC04B2600245FAD /* UIImage+Zirkfied.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		18CEF7371C8EAA9000462665 = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +180,12 @@
 			children = (
 				18CEF7461C8EAA9000462665 /* AppDelegate.h */,
 				18CEF7471C8EAA9000462665 /* AppDelegate.m */,
-				18CEF7491C8EAA9000462665 /* ViewController.h */,
-				18CEF74A1C8EAA9000462665 /* ViewController.m */,
+				189208741EC04CC600245FAD /* TableViewController.h */,
+				189208751EC04CC600245FAD /* TableViewController.m */,
+				18CEF7491C8EAA9000462665 /* ScanViewController.h */,
+				18CEF74A1C8EAA9000462665 /* ScanViewController.m */,
+				189208701EC04C3200245FAD /* CodeViewController.h */,
+				189208711EC04C3200245FAD /* CodeViewController.m */,
 				18CEF74C1C8EAA9000462665 /* Main.storyboard */,
 				18CEF7761C8EAAA200462665 /* ZFScan */,
 				18CEF74F1C8EAA9000462665 /* Assets.xcassets */,
@@ -175,11 +227,9 @@
 			children = (
 				18CEF7811C8EAAA200462665 /* ZFScanViewController.h */,
 				18CEF7821C8EAAA200462665 /* ZFScanViewController.m */,
-				18CEF77F1C8EAAA200462665 /* ZFMaskView.h */,
-				18CEF7801C8EAAA200462665 /* ZFMaskView.m */,
-				18CEF77D1C8EAAA200462665 /* ZFConst.h */,
-				18CEF77E1C8EAAA200462665 /* ZFConst.m */,
-				18B530C71E10CAB3008F0B62 /* ZFColor.h */,
+				189208611EC04AA900245FAD /* CustomView */,
+				1892085B1EC04A5E00245FAD /* Other */,
+				189208671EC04B2600245FAD /* Category */,
 				18CEF7771C8EAAA200462665 /* resource */,
 			);
 			path = ZFScan;
@@ -342,12 +392,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CEF7891C8EAAA200462665 /* ZFMaskView.m in Sources */,
 				18CEF78A1C8EAAA200462665 /* ZFScanViewController.m in Sources */,
-				18CEF74B1C8EAA9000462665 /* ViewController.m in Sources */,
+				18CEF74B1C8EAA9000462665 /* ScanViewController.m in Sources */,
+				1892085F1EC04A5E00245FAD /* ZFConst.m in Sources */,
+				189208761EC04CC600245FAD /* TableViewController.m in Sources */,
+				1892086A1EC04B2600245FAD /* UIImage+Zirkfied.m in Sources */,
+				189208721EC04C3200245FAD /* CodeViewController.m in Sources */,
 				18CEF7481C8EAA9000462665 /* AppDelegate.m in Sources */,
+				1892086E1EC04B9B00245FAD /* UIColor+Zirkfied.m in Sources */,
 				18CEF7451C8EAA9000462665 /* main.m in Sources */,
-				18CEF7881C8EAAA200462665 /* ZFConst.m in Sources */,
+				189208641EC04AA900245FAD /* ZFMaskView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +410,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CEF75E1C8EAA9000462665 /* ZFScanCodeTests.m in Sources */,
+				189208731EC04C3200245FAD /* CodeViewController.m in Sources */,
+				1892086B1EC04B2600245FAD /* UIImage+Zirkfied.m in Sources */,
+				1892086F1EC04B9B00245FAD /* UIColor+Zirkfied.m in Sources */,
+				189208651EC04AA900245FAD /* ZFMaskView.m in Sources */,
+				189208771EC04CC600245FAD /* TableViewController.m in Sources */,
+				189208601EC04A5E00245FAD /* ZFConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

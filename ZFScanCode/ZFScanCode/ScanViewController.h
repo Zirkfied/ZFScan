@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ScanViewController.h
 //  ZFScanCode
 //
 //  Created by apple on 16/3/8.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ScanViewController : UIViewController
 
 
 @end

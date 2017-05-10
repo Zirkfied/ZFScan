@@ -283,10 +283,4 @@
     [self.scanLineImg.layer removeAllAnimations];
 }
 
-#pragma mark - 重写setter, getter方法
-
-- (CGFloat)scanBezierStartXPos{
-    return (self.frame.size.width - (self.frame.size.width * ZFScanRatio)) * 0.5;
-}
-
 @end
