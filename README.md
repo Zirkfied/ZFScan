@@ -26,18 +26,18 @@ A simple scan QRCode / BarCode library for iOS - 二维码/条形码 扫描和�
 ![](https://github.com/Zirkfied/Library/blob/master/scan.png)
 
 ## 生成
-### 用法
-        第一步(step 1)
+### 用法:
+        第一步(step 1)
         将项目里ZFScan整个文件夹拖进新项目
         
         第二步(step 2)
         #import "ZFConst.h"
         
         第三步(step 3)
-        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
-        //条形码：kCodePatternForBarCode 二维码：kCodePatternForQRCode
-        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
-        imageView.image = [UIImage imageForCodeString:@"iOS开发" size:imageView.frame.size.width color:ZFSkyBlue pattern:kCodePatternForQRCode];
+        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
+        //条形码：kCodePatternForBarCode 二维码：kCodePatternForQRCode
+        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
+        imageView.image = [UIImage imageForCodeString:@"iOS开发" size:imageView.frame.size.width color:ZFSkyBlue pattern:kCodePatternForQRCode];
         [self.view addSubview:imageView];
 
 ## 本人其他开源框架
