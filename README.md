@@ -36,7 +36,6 @@ A simple scan QRCode / BarCode library for iOS - 二维码/条形码 扫描和�
         第三步(step 3)
         UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
         //条形码：kCodePatternForBarCode 二维码：kCodePatternForQRCode
-        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
         imageView.image = [UIImage imageForCodeString:@"iOS开发" size:imageView.frame.size.width color:ZFSkyBlue pattern:kCodePatternForQRCode];
         [self.view addSubview:imageView];
 
