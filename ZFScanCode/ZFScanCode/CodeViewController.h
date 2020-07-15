@@ -6,6 +6,8 @@
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
+/************* 条形码/二维码生成(普通) *************/
+
 #import <UIKit/UIKit.h>
 
 @interface CodeViewController : UIViewController

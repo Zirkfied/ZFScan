@@ -11,16 +11,36 @@
 
 @implementation UIImage (Zirkfied)
 
-+ (instancetype)imageForCodeString:(NSString *)string size:(CGFloat)size color:(UIColor *)color pattern:(kCodePattern)pattern{
-    return [[self alloc] initWithString:string size:size color:color pattern:pattern];
+#pragma mark - 初始化
+
++ (instancetype)imageCodeString:(NSString *)string size:(CGFloat)size color:(UIColor *)color pattern:(kCodePattern)pattern iconImage:(UIImage *)iconImage iconImageSize:(CGFloat)iconImageSize{
+    return [[self alloc] initWithString:string size:size color:color pattern:pattern iconImage:iconImage iconImageSize:iconImageSize];
 }
 
-- (instancetype)initWithString:(NSString *)string size:(CGFloat)size color:(UIColor *)color pattern:(kCodePattern)pattern{
+#pragma mark - 读取二维码内容
+
+- (NSString *)readCode{
+    //image转成data
+    NSData * imageData = UIImagePNGRepresentation(self);
+    
+    //直接开始识别图片,获取图片特征
+    CIImage * ciImage = [[CIImage alloc] initWithData:imageData];
+    //创建一个探测器
+    CIDetector * detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{CIDetectorAccuracy: CIDetectorAccuracyLow}];
+    NSArray * features = [detector featuresInImage:ciImage];
+    CIQRCodeFeature * codeFeature = (CIQRCodeFeature *)features.firstObject;
+    return codeFeature.messageString;
+}
+
+#pragma mark - 私有方法
+
+- (instancetype)initWithString:(NSString *)string size:(CGFloat)size color:(UIColor *)color pattern:(kCodePattern)pattern iconImage:(UIImage *)iconImage iconImageSize:(CGFloat)iconImageSize{
     self = [super init];
     if (self) {
         CIImage * ciimage = [self createOutputImageForString:string pattern:pattern];
         UIImage * qrcode = [self creatNonInterpolatedUIImageForCIImage:ciimage size:size];
-        self = [self imageBlackToTransparent:qrcode withRed:color.red andGreen:color.green andBlue:color.blue];
+        UIImage * resultImage = [self imageBlackToTransparent:qrcode withRed:color.red andGreen:color.green andBlue:color.blue];
+        self = iconImage == nil ? resultImage : [self addIconImage:iconImage iconImageSize:iconImageSize resultImage:resultImage];
     }
     return self;
 }
@@ -29,16 +49,16 @@
     NSData * data = [string dataUsingEncoding:NSUTF8StringEncoding];
     //创建filter
     CIFilter * filter = nil;
-    if (pattern == kCodePatternForBarCode) {
+    if (pattern == kCodePatternBarCode) {
         filter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
-    }else if (pattern == kCodePatternForQRCode){
+    }else if (pattern == kCodePatternQRCode){
         filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     }
     
     // 设置内容和纠错级别
     [filter setValue:data forKey:@"inputMessage"];
     
-    if (pattern == kCodePatternForQRCode) {
+    if (pattern == kCodePatternQRCode) {
         [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
     }
 
@@ -111,6 +131,28 @@ void ProviderReleaseData (void *info, const void *data, size_t size){
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
     return resultUIImage;
+}
+
+#pragma mark - 二维码中间添加icon图片
+
+- (UIImage *)addIconImage:(UIImage *)iconImage iconImageSize:(CGFloat)iconImageSize resultImage:(UIImage *)resultImage{
+    // 开启绘图, 获取图形上下文
+    UIGraphicsBeginImageContext(resultImage.size);
+    // 把二维码图片画上去 (这里是以图形上下文, 左上角为(0,0)点
+    [resultImage drawInRect:CGRectMake(0, 0, resultImage.size.width, resultImage.size.height)];
+    // 再把小图片画上去
+    CGFloat iconImage_width = iconImageSize;
+    CGFloat iconImage_height = iconImage_width;
+    CGFloat iconImage_xPos = (resultImage.size.width - iconImage_width) * 0.5;
+    CGFloat iconImage_yPos = (resultImage.size.height - iconImage_height) * 0.5;
+    [iconImage drawInRect:CGRectMake(iconImage_xPos, iconImage_yPos, iconImage_width, iconImage_height)];
+    
+    // 获取当前画得的这张图片
+    UIImage *qrImage = UIGraphicsGetImageFromCurrentImageContext();
+    // 关闭图形上下文
+    UIGraphicsEndImageContext();
+    //返回二维码图像
+    return qrImage;
 }
 
 @end

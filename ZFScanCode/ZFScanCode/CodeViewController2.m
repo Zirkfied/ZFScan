@@ -1,34 +1,35 @@
 //
-//  CodeViewController.m
+//  CodeViewController2.m
 //  ZFScanCode
 //
-//  Created by apple on 2017/5/8.
-//  Copyright © 2017年 apple. All rights reserved.
+//  Created by apple on 2020/7/15.
+//  Copyright © 2020 apple. All rights reserved.
 //
 
-#import "CodeViewController.h"
+#import "CodeViewController2.h"
 #import "ZFConst.h"
 
-@interface CodeViewController ()<UITextFieldDelegate>
+@interface CodeViewController2 ()<UITextFieldDelegate>
 
-/** 条形码 */
-@property (nonatomic, strong) UIImageView * barCodeImageView;
+/** icon图标 */
+@property (nonatomic, strong) UIImage * iconImage;
 /** 二维码 */
 @property (nonatomic, strong) UIImageView * QRCodeImageView;
 /** 输入内容textField */
 @property (nonatomic, strong) UITextField * textField;
-/** 生成条形码button */
-@property (nonatomic, strong) UIButton * barCodeButton;
 /** 生成二维码button */
 @property (nonatomic, strong) UIButton * QRCodeButton;
 
 @end
 
-@implementation CodeViewController
+@implementation CodeViewController2
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = ZFWhite;
+    
+    //icon图标
+    self.iconImage = [UIImage imageNamed:@"ShiBaInu"];
     
     //二维码
     CGFloat QRCode_width = 200;
@@ -42,7 +43,7 @@
     //生成二维码button
     CGFloat QRCodeButton_width = 60;
     CGFloat QRCodeButton_height = 30;
-    CGFloat QRCodeButton_xPos = 100;
+    CGFloat QRCodeButton_xPos = (SCREEN_WIDTH - QRCodeButton_width) * 0.5;
     CGFloat QRCodeButton_yPos = 480;
     
     self.QRCodeButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -50,27 +51,6 @@
     [self.QRCodeButton setTitle:@"二维码" forState:UIControlStateNormal];
     [self.QRCodeButton addTarget:self action:@selector(QRCodeAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.QRCodeButton];
-    
-    //条形码
-    CGFloat barCode_width = 300;
-    CGFloat barCode_height = 120;
-    CGFloat barCode_xPos = (SCREEN_WIDTH - barCode_width) / 2;
-    CGFloat barCode_yPos = 200 - barCode_height / 2.f;
-    
-    self.barCodeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(barCode_xPos, barCode_yPos, barCode_width, barCode_height)];
-    [self.view addSubview:self.barCodeImageView];
-    
-    //生成条形码button
-    CGFloat barCodeButton_width = 60;
-    CGFloat barCodeButton_height = 30;
-    CGFloat barCodeButton_xPos = SCREEN_WIDTH - barCodeButton_width - 100;
-    CGFloat barCodeButton_yPos = 480;
-    
-    self.barCodeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.barCodeButton.frame = CGRectMake(barCodeButton_xPos, barCodeButton_yPos, barCodeButton_width, barCodeButton_height);
-    [self.barCodeButton setTitle:@"条形码" forState:UIControlStateNormal];
-    [self.barCodeButton addTarget:self action:@selector(barCodeAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.barCodeButton];
     
     //textField
     CGFloat textField_width = 250;
@@ -109,19 +89,8 @@
 
 - (void)QRCodeAction{
     if (self.textField.text.length != 0) {
-        self.barCodeImageView.hidden = YES;
-        self.QRCodeImageView.image = [UIImage imageCodeString:self.textField.text size:self.QRCodeImageView.frame.size.width color:ZFSkyBlue pattern:kCodePatternQRCode iconImage:nil iconImageSize:0.f];
+        self.QRCodeImageView.image = [UIImage imageCodeString:self.textField.text size:self.QRCodeImageView.frame.size.width color:ZFSkyBlue pattern:kCodePatternQRCode iconImage:self.iconImage iconImageSize:60.f];
         self.QRCodeImageView.hidden = NO;
-    }
-}
-
-#pragma mark - 生成条形码
-
-- (void)barCodeAction{
-    if (self.textField.text.length != 0) {
-        self.QRCodeImageView.hidden = YES;
-        self.barCodeImageView.image = [UIImage imageCodeString:self.textField.text size:self.barCodeImageView.frame.size.width color:ZFRed pattern:kCodePatternBarCode iconImage:nil iconImageSize:0.f];
-        self.barCodeImageView.hidden = NO;
     }
 }
 

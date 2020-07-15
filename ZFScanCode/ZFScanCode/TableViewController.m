@@ -22,11 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titleArray = @[@"条形码/二维码扫描 (ScanViewController)",
-                        @"条形码/二维码生成 (CodeViewController)"];
+    self.titleArray = @[@"条形码/二维码扫描\n(ScanViewController)",
+                        @"条形码/二维码生成(普通)\n(CodeViewController)",
+                        @"二维码生成(中间带图标)\n(CodeViewController2)",
+                        @"二维码识别(长按)\n(ReadCodeViewController)",
+                        @"二维码识别(从相册获取)\n(ReadCodeViewController2)"];
     
     self.viewControllerArray = @[@"ScanViewController",
-                   @"CodeViewController"];
+                                 @"CodeViewController",
+                                 @"CodeViewController2",
+                                 @"ReadCodeViewController",
+                                 @"ReadCodeViewController2"];
 }
 
 #pragma mark - Table view data source
@@ -44,8 +50,15 @@
     }
     
     cell.textLabel.text = self.titleArray[indexPath.row];
+    cell.textLabel.numberOfLines = 0;
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

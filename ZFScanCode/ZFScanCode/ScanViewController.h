@@ -6,6 +6,8 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
+/************* 条形码/二维码扫描 *************/
+
 #import <UIKit/UIKit.h>
 
 @interface ScanViewController : UIViewController

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180AD70D24BDB83200B9FEA1 /* ReadCodeViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 180AD70C24BDB83200B9FEA1 /* ReadCodeViewController2.m */; };
+		180AD70E24BDB83200B9FEA1 /* ReadCodeViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 180AD70C24BDB83200B9FEA1 /* ReadCodeViewController2.m */; };
+		184C126E24BC4D44005A7A1C /* ReadCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C126D24BC4D44005A7A1C /* ReadCodeViewController.m */; };
+		184C126F24BC4D44005A7A1C /* ReadCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C126D24BC4D44005A7A1C /* ReadCodeViewController.m */; };
+		184C127224BC5871005A7A1C /* ZFCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C127124BC5871005A7A1C /* ZFCodeImageView.m */; };
+		184C127324BC5871005A7A1C /* ZFCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C127124BC5871005A7A1C /* ZFCodeImageView.m */; };
 		1892085F1EC04A5E00245FAD /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892085E1EC04A5E00245FAD /* ZFConst.m */; };
 		189208601EC04A5E00245FAD /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892085E1EC04A5E00245FAD /* ZFConst.m */; };
 		189208641EC04AA900245FAD /* ZFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189208631EC04AA900245FAD /* ZFMaskView.m */; };
@@ -39,6 +45,8 @@
 		18CEF7861C8EAAA200462665 /* ScanQR3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF77B1C8EAAA200462665 /* ScanQR3@2x.png */; };
 		18CEF7871C8EAAA200462665 /* ScanQR4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CEF77C1C8EAAA200462665 /* ScanQR4@2x.png */; };
 		18CEF78A1C8EAAA200462665 /* ZFScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7821C8EAAA200462665 /* ZFScanViewController.m */; };
+		18D92A3E24BEE3DF00F2E8D9 /* CodeViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D92A3D24BEE3DF00F2E8D9 /* CodeViewController2.m */; };
+		18D92A3F24BEE3DF00F2E8D9 /* CodeViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D92A3D24BEE3DF00F2E8D9 /* CodeViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180AD70B24BDB83200B9FEA1 /* ReadCodeViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadCodeViewController2.h; sourceTree = "<group>"; };
+		180AD70C24BDB83200B9FEA1 /* ReadCodeViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadCodeViewController2.m; sourceTree = "<group>"; };
+		184C126C24BC4D44005A7A1C /* ReadCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadCodeViewController.h; sourceTree = "<group>"; };
+		184C126D24BC4D44005A7A1C /* ReadCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadCodeViewController.m; sourceTree = "<group>"; };
+		184C127024BC5871005A7A1C /* ZFCodeImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFCodeImageView.h; sourceTree = "<group>"; };
+		184C127124BC5871005A7A1C /* ZFCodeImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFCodeImageView.m; sourceTree = "<group>"; };
 		1892085C1EC04A5E00245FAD /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
 		1892085D1EC04A5E00245FAD /* ZFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFConst.h; sourceTree = "<group>"; };
 		1892085E1EC04A5E00245FAD /* ZFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFConst.m; sourceTree = "<group>"; };
@@ -98,6 +112,8 @@
 		18CEF77C1C8EAAA200462665 /* ScanQR4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR4@2x.png"; sourceTree = "<group>"; };
 		18CEF7811C8EAAA200462665 /* ZFScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFScanViewController.h; sourceTree = "<group>"; };
 		18CEF7821C8EAAA200462665 /* ZFScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFScanViewController.m; sourceTree = "<group>"; };
+		18D92A3C24BEE3DF00F2E8D9 /* CodeViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeViewController2.h; sourceTree = "<group>"; };
+		18D92A3D24BEE3DF00F2E8D9 /* CodeViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +156,8 @@
 			children = (
 				189208621EC04AA900245FAD /* ZFMaskView.h */,
 				189208631EC04AA900245FAD /* ZFMaskView.m */,
+				184C127024BC5871005A7A1C /* ZFCodeImageView.h */,
+				184C127124BC5871005A7A1C /* ZFCodeImageView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -186,6 +204,12 @@
 				18CEF74A1C8EAA9000462665 /* ScanViewController.m */,
 				189208701EC04C3200245FAD /* CodeViewController.h */,
 				189208711EC04C3200245FAD /* CodeViewController.m */,
+				18D92A3C24BEE3DF00F2E8D9 /* CodeViewController2.h */,
+				18D92A3D24BEE3DF00F2E8D9 /* CodeViewController2.m */,
+				184C126C24BC4D44005A7A1C /* ReadCodeViewController.h */,
+				184C126D24BC4D44005A7A1C /* ReadCodeViewController.m */,
+				180AD70B24BDB83200B9FEA1 /* ReadCodeViewController2.h */,
+				180AD70C24BDB83200B9FEA1 /* ReadCodeViewController2.m */,
 				18CEF74C1C8EAA9000462665 /* Main.storyboard */,
 				18CEF7761C8EAAA200462665 /* ZFScan */,
 				18CEF74F1C8EAA9000462665 /* Assets.xcassets */,
@@ -317,7 +341,8 @@
 				TargetAttributes = {
 					18CEF73F1C8EAA9000462665 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = N7QRRWM4QN;
+						DevelopmentTeam = W6629ZPGR7;
+						ProvisioningStyle = Manual;
 					};
 					18CEF7581C8EAA9000462665 = {
 						CreatedOnToolsVersion = 7.2;
@@ -334,6 +359,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -394,13 +420,17 @@
 			files = (
 				18CEF78A1C8EAAA200462665 /* ZFScanViewController.m in Sources */,
 				18CEF74B1C8EAA9000462665 /* ScanViewController.m in Sources */,
+				184C126E24BC4D44005A7A1C /* ReadCodeViewController.m in Sources */,
 				1892085F1EC04A5E00245FAD /* ZFConst.m in Sources */,
 				189208761EC04CC600245FAD /* TableViewController.m in Sources */,
 				1892086A1EC04B2600245FAD /* UIImage+Zirkfied.m in Sources */,
 				189208721EC04C3200245FAD /* CodeViewController.m in Sources */,
 				18CEF7481C8EAA9000462665 /* AppDelegate.m in Sources */,
+				18D92A3E24BEE3DF00F2E8D9 /* CodeViewController2.m in Sources */,
 				1892086E1EC04B9B00245FAD /* UIColor+Zirkfied.m in Sources */,
 				18CEF7451C8EAA9000462665 /* main.m in Sources */,
+				184C127224BC5871005A7A1C /* ZFCodeImageView.m in Sources */,
+				180AD70D24BDB83200B9FEA1 /* ReadCodeViewController2.m in Sources */,
 				189208641EC04AA900245FAD /* ZFMaskView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,11 +440,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CEF75E1C8EAA9000462665 /* ZFScanCodeTests.m in Sources */,
+				184C126F24BC4D44005A7A1C /* ReadCodeViewController.m in Sources */,
 				189208731EC04C3200245FAD /* CodeViewController.m in Sources */,
 				1892086B1EC04B2600245FAD /* UIImage+Zirkfied.m in Sources */,
 				1892086F1EC04B9B00245FAD /* UIColor+Zirkfied.m in Sources */,
 				189208651EC04AA900245FAD /* ZFMaskView.m in Sources */,
+				180AD70E24BDB83200B9FEA1 /* ReadCodeViewController2.m in Sources */,
+				18D92A3F24BEE3DF00F2E8D9 /* CodeViewController2.m in Sources */,
 				189208771EC04CC600245FAD /* TableViewController.m in Sources */,
+				184C127324BC5871005A7A1C /* ZFCodeImageView.m in Sources */,
 				189208601EC04A5E00245FAD /* ZFConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +513,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xuefeng Deng (QZ7Y6658V7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xuefeng Deng (QZ7Y6658V7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -523,7 +558,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xuefeng Deng (QZ7Y6658V7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xuefeng Deng (QZ7Y6658V7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -548,11 +584,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N7QRRWM4QN;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xuefeng Deng (QZ7Y6658V7)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = W6629ZPGR7;
 				INFOPLIST_FILE = ZFScanCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zirkfied.ZFScanCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = iOS_Wildcard_Provisioning_Profile_Development;
 			};
 			name = Debug;
 		};
@@ -560,11 +599,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N7QRRWM4QN;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xuefeng Deng (QZ7Y6658V7)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = W6629ZPGR7;
 				INFOPLIST_FILE = ZFScanCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zirkfied.ZFScanCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = iOS_Wildcard_Provisioning_Profile_Development;
 			};
 			name = Release;
 		};
