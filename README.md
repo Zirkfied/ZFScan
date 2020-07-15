@@ -74,8 +74,8 @@ A simple scan QRCode / BarCode library for iOS - 二维码/条形码 扫描，�
         2020.07.15 ①新增二维码生成(中间带图标)，具体用法查看Demo中的CodeViewController2.m文件
                    ②新增二维码识别(长按)，具体用法查看Demo中的ReadCodeViewController.m文件
                    ③新增二维码识别(从相册获取)，具体用法查看Demo中的ReadCodeViewController2.m文件
-                   ④优化部分方法和属性的命名
-                   ⑤苹果原生API不支持条形码识别，所以暂时只有二维码识别功能
+                   ④苹果原生API不支持条形码识别，所以暂时只有二维码识别功能
+                   ⑤优化部分方法和属性的命名
                   
         
 
